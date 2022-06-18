@@ -1,5 +1,17 @@
 {"products":[
-    {"name":"Casas", "image":".../casa.png", "description":"Casas em bairros e condomínios horizontais."},
-    {"name":"Apartamentos", "image":".../apartamento.png", "description":"Apartamentos de alto padrão localizados na Zona Sul de Uberlândia."},
-    {"name":"Terrenos", "image":".../terreno.png", "description":"Lotes comerciais e residenciais em ótimos bairros e condomínios."}
+    {
+        "name":"Casas", 
+        "image":"../img/products/casa.jpg", 
+        "description":"Casas em bairros e condomínios horizontais."
+    },
+    {
+        "name":"Apartamentos", 
+        "image":"../img/products/apartamento.jpg", 
+        "description":"Apartamentos de alto padrão localizados na Zona Sul de Uberlândia."
+    },
+    {
+        "name":"Terrenos", 
+        "image":"../img/products/terreno.jpg", 
+        "description":"Lotes comerciais e residenciais em ótimos bairros e condomínios."
+    }
 ]}

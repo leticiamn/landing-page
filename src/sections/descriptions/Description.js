@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Benefits from './Benefits';
 import Product from './Product';
 import products from './products';
-
+import '../../css/style.css';
 class Description extends Component {
     constructor(props) {
         super(props);

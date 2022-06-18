@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oswald&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid red;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+.products img {
+    object-fit: cover;
+    border-radius: 12px;
+    width: 370px;
+    height: 290px;
+}
+
+.header img {
+    width: 165px;
+    height: 80px;
+    align-items: center;
+}
+
+.social img {
+    width: 37px;
+    height: 37px;
+    margin: 8px;
+}
+
+.social {
+    float: right;
+    padding-right: 25px;
+}
+
+.logo {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+
+.call-mid {
+    background-color: #FFFFFF;
+    opacity: 80%;
+    margin: 0 auto;
+    max-width: 38vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.call h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 155.02%;
+    opacity: 100% !important;
+    color: #647B75;
+}
+.call-mid span {
+    display: block;
+    color: #613046;
+}
+
+.call-mid input[type=button], .form form input[type=button] {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    background-color: #613046;
+    border-radius: 10px;
+    padding: 15px 90px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    line-height: 29px;
+}
+
+.call-section {
+    background-image: url(/public/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 84vh;
+    display: flex;
+}
+
+.description-section h2 {
+    font-size: 40px;
+}
+
+.description-section h3 {
+    color: #8F8C8C;
+    font-size: 20px;
+}
+
+.description-section {
+    text-align: center;
+    color: #647B75;
+}
+
+.description-section p {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #282828;
+}
+
+.description-section input[type="button"] {
+    border: 1.5px solid #707070;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #707070;
+    background: none;
+    padding: 5px 100px;
+}
+
+.benefits-section {
+    margin: auto;
+    width: 80vw;
+    background: #647B75;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-content, .benefits-title {
+    width: 20%;
+    height: 112px;
+    text-align: left;
+    margin: 20px;
+}
+
+.benefits-title p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+
+.benefits-content h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.benefits-content p {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 126.9%;
+    color: #FFFFFF;
+}
+
+.benefits-content {
+    border-left: 5px solid #613046;
+}
+
+.form {
+    background-image: url(/public/img/form_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 84vh;
+    
+}
+
+.form form {
+    position: absolute;
+    width: 532px;
+    height: 510.69px;
+    left: 55vw;
+    background: rgba(186, 197, 180, 0.9);
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.form h2 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #613046;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.045em;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.form input[type="text"], .form input[type="email"] {
+    width: 90%;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.form placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+}

@@ -1,0 +1,25 @@
+{"itens":[
+    {
+        "name":"Salas Comerciais", 
+        "image":"/../img/carousel/item1.jpg", 
+        "p1":"Estabeleça uma sede para sua empresa com um escritório privativo.", "p2":"Nossos espaços de trabalho totalmente equipados estão prontos para uso.", "p3":"Desde os móveis até o Wi-Fi de alta velocidade: tudo para que você possa se concentrar em impulsionar seus negócios.", 
+        "p4":"Ofereça flexibilidade para sua empresa crescer em um espaço de escritório moderno em Uberlândia.", 
+        "p5":"Fique temporariamente ou crie raízes duradouras com a liberdade de personalizar o espaço conforme suas necessidades."
+    },
+
+    {
+        "name":"Apartamentos", 
+        "image":"/../img/carousel/item2.jpg", 
+        "p1":"Estabeleça uma sede para sua empresa com um escritório privativo.", "p2":"Nossos espaços de trabalho totalmente equipados estão prontos para uso.", "p3":"Desde os móveis até o Wi-Fi de alta velocidade: tudo para que você possa se concentrar em impulsionar seus negócios.", 
+        "p4":"Ofereça flexibilidade para sua empresa crescer em um espaço de escritório moderno em Uberlândia.", 
+        "p5":"Fique temporariamente ou crie raízes duradouras com a liberdade de personalizar o espaço conforme suas necessidades."
+    },
+
+    {
+        "name":"Terrenos", 
+        "image":"/../img/carousel/item3.jpg", 
+        "p1":"Estabeleça uma sede para sua empresa com um escritório privativo.", "p2":"Nossos espaços de trabalho totalmente equipados estão prontos para uso.", "p3":"Desde os móveis até o Wi-Fi de alta velocidade: tudo para que você possa se concentrar em impulsionar seus negócios.", 
+        "p4":"Ofereça flexibilidade para sua empresa crescer em um espaço de escritório moderno em Uberlândia.", 
+        "p5":"Fique temporariamente ou crie raízes duradouras com a liberdade de personalizar o espaço conforme suas necessidades."
+    }
+]}

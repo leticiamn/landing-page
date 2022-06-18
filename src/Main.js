@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Call from './sections/Call';
-import Carousel from './sections/Carousel';
+import Carousel from './sections/carousel/CarouselSection';
 import Description from './sections/descriptions/Description';
 import Form from './sections/Form';
 import Profile from './sections/Profile';
