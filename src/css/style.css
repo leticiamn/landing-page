@@ -6,7 +6,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid red;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -365,7 +364,7 @@
 .footer {
     background: #3E504B;
     text-align: center;
-    
+    padding: 1vh;
 }
 
 .footer p {
