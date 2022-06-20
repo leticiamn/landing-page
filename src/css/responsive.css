@@ -1,0 +1,120 @@
+@media only screen and (min-width: 800px) {
+
+    .header img {
+        width: 155px;
+        height: 70px;
+    }
+
+    .logo {
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social img {
+        width: 37px;
+        height: 37px;
+        margin: 8px;
+    }
+
+    .products img {
+        width: 370px;
+        height: 290px;
+    }
+    .call-section {
+        min-height: 86vh;
+    }
+    .call-mid {
+        max-width: 45vw;
+    }
+
+    .call h1, .call-mid span {
+        font-size: 50px;
+    }
+
+    .call-mid input[type=button], .form form input[type=button] {
+        font-size: 24px;
+    }
+
+    .products img {
+        margin: 0;
+    }
+
+    .products {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 2vh;
+    }
+
+    .products div {
+        max-width: 370px;
+    }
+
+    .products input[type=button] {
+        width: 100%;
+    }
+
+    .benefits-section {
+        flex-direction: row;
+        width: 85vw;
+    }
+
+    .benefits-content, .benefits-title {
+        width: 20%;
+    }
+
+
+    .item-carousel {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .item-carousel img, .item-carousel div {
+        max-width: 35vw;
+        height: 35vw;
+        margin: auto;
+    }
+
+    .item-carousel h2 {
+        font-size: 42px;
+    }
+
+    .item-carousel p {
+        font-size: 18px;
+    }
+    
+    .form {
+        min-height: 100vh;
+    }
+
+    .form form {
+        width: 35vw;
+        height: 70vh;
+        margin-left: 50vw;
+    }
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .profile img, .profile div {
+        min-width: 40vw;
+        max-width: 40vw;
+        height: 40vw;
+        margin: 2vw;
+    }
+
+    .profile div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .profile h2 {
+        margin-top: 0;
+    }
+}

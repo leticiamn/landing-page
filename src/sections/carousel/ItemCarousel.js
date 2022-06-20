@@ -6,13 +6,14 @@ class ItemCarousel extends Component {
         return (
             <div class="item-carousel">
                 <img src={this.props.image} alt="" />
-                <h2>{this.props.name}</h2>
-                <p>{this.props.p1}</p>
-                <p>{this.props.p2}</p>
-                <p>{this.props.p3}</p>
-                <p>{this.props.p4}</p>
-                <p>{this.props.p5}</p>
-                <input type="button" value="VEJA MAIS" />
+                <div>
+                    <h2>{this.props.name}</h2>
+                    <p>{this.props.p1}</p>
+                    <p>{this.props.p2}</p>
+                    <p>{this.props.p3}</p>
+                    <p>{this.props.p4}</p>
+                    <p>{this.props.p5}</p>
+                </div>
             </div>
         );
     }

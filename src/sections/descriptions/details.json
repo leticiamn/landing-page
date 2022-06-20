@@ -1,0 +1,57 @@
+{"itens":
+    [{"details":[
+    {
+        "name":"Casa com piscina", 
+        "image":"/../img/carousel/item1.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+
+    {
+        "name":"Apartamentos com piscina",  
+        "image":"/../img/carousel/item2.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+
+    {
+        "name":"Terrenos", 
+        "image":"/../img/carousel/item3.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    }
+]},
+{"details":[
+    {
+        "name":"Casa com piscina", 
+        "image":"/../img/carousel/item1.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+    {
+        "name":"Apartamentos com piscina",  
+        "image":"/../img/carousel/item2.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+    {
+        "name":"Terrenos", 
+        "image":"/../img/carousel/item3.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    }
+]},
+{"details":[
+    {
+        "name":"Casa com piscina", 
+        "image":"/../img/carousel/item1.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+
+    {
+        "name":"Apartamentos com piscina",  
+        "image":"/../img/carousel/item2.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    },
+
+    {
+        "name":"Terrenos", 
+        "image":"/../img/carousel/item3.jpg", 
+        "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
+    }
+]}]
+}

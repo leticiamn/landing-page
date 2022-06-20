@@ -15,9 +15,10 @@ class Description extends Component {
                 <h3>SEJA PARA MORAR OU INVESTIR, EU POSSO TE AJUDAR!</h3>
                 <div className="products">
                     <Product name={this.state.products[0].name} image={this.state.products[0].image} description={this.state.products[0].description} />
+                    
                     <Product name={this.state.products[1].name} image={this.state.products[1].image} description={this.state.products[1].description} />
                     <Product name={this.state.products[2].name} image={this.state.products[2].image} description={this.state.products[2].description} />
-                    
+                                      
                 </div>  
                 <div className="benefits">
                     <Benefits/>

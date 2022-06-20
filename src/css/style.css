@@ -1,61 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oswald&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     border: 1px solid red;
-    font-family: 'Comfortaa', cursive;
     font-family: 'Oswald', sans-serif;
 }
 
-.products img {
-    object-fit: cover;
-    border-radius: 12px;
-    width: 370px;
-    height: 290px;
-}
-
+/*********************menu***********************/
 .header img {
-    width: 165px;
-    height: 80px;
-    align-items: center;
+    width: 145px;
+    height: 60px;
 }
 
 .social img {
-    width: 37px;
-    height: 37px;
-    margin: 8px;
+    width: 32px;
+    height: 32px;
+    margin: 5px;
 }
 
+.social a {
+    min-height: 59px;
+}
 .social {
     float: right;
-    padding-right: 25px;
+    margin-right: 2vw;
 }
 
 .logo {
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    float: left;
+    margin-left: 2vw;
 }
 
 .header {
     position: relative;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+
+  /*******************1st section - call *********************/
 .call-mid {
-    background-color: #FFFFFF;
-    opacity: 80%;
+    background: rgba(255, 255, 255, 0.8);
     margin: 0 auto;
-    max-width: 38vw;
+    max-width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    justify-items: center;
     flex-direction: column;
     padding: 15px;
 }
@@ -64,9 +62,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 54px;
+    font-size: 46px;
     line-height: 155.02%;
-    opacity: 100% !important;
     color: #647B75;
 }
 .call-mid span {
@@ -75,25 +72,36 @@
 }
 
 .call-mid input[type=button], .form form input[type=button] {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     background-color: #613046;
     border-radius: 10px;
-    padding: 15px 90px;
+    padding: 15px 10px;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     line-height: 29px;
+    text-align: center;
+}
+
+.call-mid input[type=button] {
+    margin-top: 5vh;
+    width: 75%;
 }
 
 .call-section {
     background-image: url(/public/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 84vh;
+    min-height: 91vh;
     display: flex;
 }
+
+/****************2nd section - description*****************/
 
 .description-section h2 {
     font-size: 40px;
@@ -102,11 +110,28 @@
 .description-section h3 {
     color: #8F8C8C;
     font-size: 20px;
+    margin: 3vh 2vh;
 }
+
+.description-section h4 {
+    margin: 2vh auto;
+} 
 
 .description-section {
     text-align: center;
     color: #647B75;
+    margin: 5vh auto;
+}
+
+.products img {
+    object-fit: cover;
+    border-radius: 12px;
+    width: 80vw;
+    height: 290px;
+}
+
+.products p {
+    margin: 1vh auto;
 }
 
 .description-section p {
@@ -128,17 +153,23 @@
 }
 
 .benefits-section {
-    margin: auto;
+    margin: 2vh auto;
     width: 80vw;
     background: #647B75;
     border-radius: 16px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.benefits-title {
+    display: flex;
+    align-items: center;
 }
 
 .benefits-content, .benefits-title {
-    width: 20%;
-    height: 112px;
+    width: 85%;
+    min-height: 112px;
     text-align: left;
     margin: 20px;
 }
@@ -146,17 +177,16 @@
 .benefits-title p {
     font-weight: 700;
     font-size: 32px;
-    line-height: 39px;
     color: #FFFFFF;
 }
 
 .benefits-content h4 {
     font-weight: 700;
     font-size: 24px;
-    line-height: 29px;
     color: #FFFFFF;
     font-family: 'Inter';
     font-style: normal;
+    margin-top: 4px;
 }
 
 .benefits-content p {
@@ -164,7 +194,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 126.9%;
     color: #FFFFFF;
 }
 
@@ -172,23 +201,67 @@
     border-left: 5px solid #613046;
 }
 
+/****************3rd section - carousel*****************/
+.thumbs-wrapper, .axis-vertical {
+    display: none;
+}
+
+.carousel-root {
+    background: rgba(186, 197, 180,0.2);
+}
+
+.item-carousel { 
+    padding: 2vh;
+}
+
+.item-carousel img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+}
+
+.item-carousel h2 {
+    color: #647B75;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 2vh;
+}
+
+.item-carousel p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #282828;
+    margin: 2vh auto;
+}
+
+/****************4th section - form*****************/
 .form {
     background-image: url(/public/img/form_background.png);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 84vh;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form form {
-    position: absolute;
-    width: 532px;
-    height: 510.69px;
-    left: 55vw;
+    margin: auto;
+    max-width: 85vw;
+    height: 45vh;
     background: rgba(186, 197, 180, 0.9);
-    opacity: 0.9;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form h2 {
@@ -198,13 +271,27 @@
     line-height: 41px;
     text-align: center;
     letter-spacing: 0.045em;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    text-shadow: 1px -1px rgba(255, 255, 255, 0.35);
+    margin-bottom: 4vh;
+}
+
+.form form input[type=button] {
+    margin-top: 4vh;
+    max-width: 85%;
+    width: 85%;
+    font-size: 18px;
 }
 
 .form input[type="text"], .form input[type="email"] {
-    width: 90%;
-    padding: 5px 15px;
+    width: 85%;
+    padding: 10px 15px;
     border-radius: 5px;
+    margin: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .form placeholder {
@@ -212,4 +299,91 @@
     font-size: 20px;
     line-height: 24px;
     color: #707070;
+}
+
+/***************5th section - perfil*****************/
+
+.profile {
+    background-image: url(/public/img/bg-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4vh;
+}
+
+.profile img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.profile div {
+    margin: auto;
+    width: 80vw;
+    font-family: 'Source Sans 3';
+    padding-bottom: 4vh;
+}
+
+.profile h2 {
+    color: #613046;
+    line-height: 97.4%;
+    font-size: 46px;
+    margin: 4vh auto;
+}
+
+.profile h3 {
+    color: #816438;
+    line-height: 97.4%;
+    font-size: 28px;
+    margin: 4vh auto;
+}
+
+.profile span {
+    font-weight: 700;
+}
+
+.profile p {
+    margin: 5px auto;
+}
+
+.profile p:first-child {
+    margin-top:0;
+}
+
+.profile p:last-child {
+    margin-bottom:0;
+}
+/********************footer********************/
+
+.footer {
+    background: #3E504B;
+    text-align: center;
+    
+}
+
+.footer p {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.footer p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.footer p:last-child {
+    font-size: 20px;
+    color: #000000;
+    margin: 10px;
 }
