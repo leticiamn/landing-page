@@ -1,8 +1,13 @@
 @media only screen and (min-width: 800px) {
 
+    .header {
+        justify-content: flex-end
+    }
+
     .header img {
         width: 155px;
         height: 70px;
+        float: right;
     }
 
     .logo {
@@ -23,9 +28,15 @@
         width: 370px;
         height: 290px;
     }
-    .call-section {
-        min-height: 86vh;
+
+    .products h4 {
+        font-size: 40px;
     }
+
+    .call-section {
+        min-height: 87,5vh;
+    }
+
     .call-mid {
         max-width: 45vw;
     }
@@ -61,6 +72,7 @@
     .benefits-section {
         flex-direction: row;
         width: 85vw;
+        margin: 5vh auto;
     }
 
     .benefits-content, .benefits-title {

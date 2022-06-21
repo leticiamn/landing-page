@@ -12,7 +12,7 @@ class CarouselSection extends Component {
     }
     render() {
         return (
-            <Carousel infiniteLoop useKeyboardArrows autoPlay>
+            <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
                 <div class="item"><ItemCarousel
                     name={this.state.itens[0].name}
                     image={this.state.itens[0].image}                    

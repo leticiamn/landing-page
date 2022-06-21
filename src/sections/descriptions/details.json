@@ -1,5 +1,5 @@
 {"itens":
-    [{"details":[
+    [{"item":[
     {
         "name":"Casa com piscina", 
         "image":"/../img/carousel/item1.jpg", 
@@ -18,7 +18,7 @@
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     }
 ]},
-{"details":[
+{"item":[
     {
         "name":"Casa com piscina", 
         "image":"/../img/carousel/item1.jpg", 
@@ -35,7 +35,7 @@
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     }
 ]},
-{"details":[
+{"item":[
     {
         "name":"Casa com piscina", 
         "image":"/../img/carousel/item1.jpg", 

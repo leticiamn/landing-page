@@ -9,6 +9,14 @@
     font-family: 'Oswald', sans-serif;
 }
 
+.none {
+    display: none;
+}
+
+.opacity {
+    opacity: 0;
+}
+
 /*********************menu***********************/
 .header img {
     width: 145px;
@@ -24,6 +32,7 @@
 .social a {
     min-height: 59px;
 }
+
 .social {
     float: right;
     margin-right: 2vw;
@@ -85,6 +94,7 @@
     border-radius: 10px;
     line-height: 29px;
     text-align: center;
+    cursor: pointer;
 }
 
 .call-mid input[type=button] {
@@ -131,6 +141,11 @@
 
 .products p {
     margin: 1vh auto;
+    min-height: 44.8px; 
+}
+
+.products h4 {
+    font-size: 34px;
 }
 
 .description-section p {
@@ -149,6 +164,7 @@
     color: #707070;
     background: none;
     padding: 5px 100px;
+    cursor: pointer;
 }
 
 .benefits-section {
@@ -197,6 +213,7 @@
 }
 
 .benefits-content {
+    padding-left: 1vw;
     border-left: 5px solid #613046;
 }
 
@@ -240,6 +257,10 @@
 }
 
 /****************4th section - form*****************/
+.error {
+    color: red;
+}
+
 .form {
     background-image: url(/public/img/form_background.png);
     background-repeat: no-repeat;
@@ -254,6 +275,7 @@
     margin: auto;
     max-width: 85vw;
     height: 45vh;
+    min-height: 450px;
     background: rgba(186, 197, 180, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -282,6 +304,8 @@
 }
 
 .form input[type="text"], .form input[type="email"] {
+    outline: none;
+    border: none;
     width: 85%;
     padding: 10px 15px;
     border-radius: 5px;
@@ -383,6 +407,5 @@
 
 .footer p:last-child {
     font-size: 20px;
-    color: #000000;
     margin: 10px;
 }
