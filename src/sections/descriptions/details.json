@@ -1,55 +1,55 @@
 {"itens":
     [{"item":[
     {
-        "name":"Casa com piscina", 
+        "name":"Casas de luxo", 
         "image":"/../img/carousel/item1.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
 
     {
-        "name":"Apartamentos com piscina",  
+        "name":"Casas em condomínios fechados",  
         "image":"/../img/carousel/item2.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
 
     {
-        "name":"Terrenos", 
+        "name":"Casas em bairro", 
         "image":"/../img/carousel/item3.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     }
 ]},
 {"item":[
     {
-        "name":"Casa com piscina", 
+        "name":"Apartamentos", 
         "image":"/../img/carousel/item1.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
     {
-        "name":"Apartamentos com piscina",  
+        "name":"Coberturas",  
         "image":"/../img/carousel/item2.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
     {
-        "name":"Terrenos", 
+        "name":"Condomínios verticais", 
         "image":"/../img/carousel/item3.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     }
 ]},
 {"item":[
     {
-        "name":"Casa com piscina", 
+        "name":"Lotes comerciais", 
         "image":"/../img/carousel/item1.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
 
     {
-        "name":"Apartamentos com piscina",  
+        "name":"Lotes residenciais",  
         "image":"/../img/carousel/item2.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     },
 
     {
-        "name":"Terrenos", 
+        "name":"Lotes para investir", 
         "image":"/../img/carousel/item3.jpg", 
         "description":"Estabeleça uma sede para sua empresa com um escritório privativo."
     }
