@@ -13,9 +13,18 @@ class Login extends Component {
     unsubscribeFromAuth = null;
 
     componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-        this.setState({ currentUser: user });
-    });
+        this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+            this.setState({ currentUser: user });
+        });
+    }
+    
+    getJson = () => {
+        if (this.state.currentUser) 
+        fetch('https://projetocamilla.herokuapp.com/form')
+            .then((response) => response.json())
+            .then((json) => {
+                return (JSON.stringify(json))
+            })
     }
 
     componentWillUnmount() {
@@ -31,11 +40,8 @@ class Login extends Component {
                     <div>Name: {this.state.currentUser.displayName}</div>
                     <div>Email: {this.state.currentUser.email}</div>
                     <button onClick={() => auth.signOut()}>LOG OUT</button>
-                            
-                            {fetch('https://projetocamilla.herokuapp.com/form')
-                                .then((response) => response.json())
-                                .then((json) => { return (<div>{JSON.stringify(json)}</div>) })
-                                }
+                            <div>{ this.getJson.toString()}</div>
+                                
                 </div>
                 ) :
 
