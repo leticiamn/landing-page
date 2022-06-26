@@ -34,7 +34,7 @@ class Login extends Component {
                             
                             {fetch('https://projetocamilla.herokuapp.com/form')
                                 .then((response) => response.json())
-                                .then((json) => { return (<div>{json}</div>) })
+                                .then((json) => { return (<div>{JSON.stringify(json)}</div>) })
                                 }
                 </div>
                 ) :
