@@ -3,15 +3,15 @@ import axios from 'axios';
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.state = {name:'', phone:'',email:''}
+        this.state = {nome:'', telefone:'', email:''}
       }
     render() {
         return (
             <div  id="form" className="form" name="form">
                 <form>
                     <h2>Compre agora</h2>
-                    <input type="text" name="name" id="name" placeholder="Seu nome completo" onChange={this.getData}/>
-                    <input type="text" name="phone" id="phone" placeholder="Seu telefone (WhatsApp)" onChange={this.getData}/>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={this.getData}/>
+                    <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" onChange={this.getData}/>
                     <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" onChange={this.getData} />
                     <p id="error" className="opacity">ok</p>
                     <input type="button" value="ENCONTRE SEU IMÓVEL" onClick={this.verify} />
@@ -25,12 +25,12 @@ class Form extends Component {
     }
 
     verify = () => {
-        if (!this.state.name) {
+        if (!this.state.nome) {
             document.getElementById("error").setAttribute("className", "error");
             document.getElementById("error").innerHTML = "Insira um nome válido!";
         }
 
-        else if (!this.state.phone) {
+        else if (!this.state.telefone) {
             document.getElementById("error").setAttribute("className", "error");
             document.getElementById("error").innerHTML = "Insira um telefone válido!";
         }
@@ -41,21 +41,30 @@ class Form extends Component {
         }
 
         else {
-            axios({
-                method: "post",
-                url: "/form",
-                baseURL: "https://projetocamilla.herokuapp.com/",
+            // axios({
+            //     method: "post",
+            //     url: "/form",
+            //     baseURL: "https://projetocamilla.herokuapp.com/",
+            //     headers: {
+            //         'Access-Control-Allow-Private-Network': true,
+            //         'Access-Control-Allow-Origin': '*',
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(this.state)
+            // })
+            // .then(function (response) {
+            //     console.log(response);
+            // })
+            // .catch(function (error) {
+            //     console.error(error);
+            // });
+            fetch('https://projetocamilla.herokuapp.com/form', {
+                method: 'POST',
+                body: JSON.stringify(this.state),
                 headers: {
-                    'Access-Control-Allow-Private-Network': true,
-                    'Access-Control-Allow-Origin': 'Origin'
+                    'Content-Type': 'application/json'
                 }
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.error(error);
-            });;
+            });
         }
     }
 
