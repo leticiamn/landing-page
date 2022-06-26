@@ -44,7 +44,7 @@ class Form extends Component {
             axios({
                 method: "post",
                 url: "/form",
-                baseURL: "http://localhost:8080/",
+                baseURL: "https://projetocamilla.herokuapp.com/",
                 headers: {
                     'Access-Control-Allow-Private-Network': true,
                     'Access-Control-Allow-Origin': 'Origin'
