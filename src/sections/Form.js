@@ -7,8 +7,8 @@ class Form extends Component {
       }
     render() {
         return (
-            <div class="form" name="form">
-                <form id="form">
+            <div  id="form" className="form" name="form">
+                <form>
                     <h2>Compre agora</h2>
                     <input type="text" name="name" id="name" placeholder="Seu nome completo" onChange={this.getData}/>
                     <input type="text" name="phone" id="phone" placeholder="Seu telefone (WhatsApp)" onChange={this.getData}/>

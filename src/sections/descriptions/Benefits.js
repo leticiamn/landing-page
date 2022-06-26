@@ -5,9 +5,9 @@ class Benefits extends Component {
         return (
             <div class="benefits-section">
                 <div class="benefits-title"><p>Viva na região mais nobre da cidade.</p></div>
-                <div class="benefits-content"><h4>Benefícios</h4>
+                <div class="Router"><h4>Benefícios</h4>
                     <p>Imóveis de alto padrão com localizações privilegiadas e o conforto e segurança.</p></div>
-                <div class="benefits-content"><h4>Exclusividade</h4>
+                <div class="Router"><h4>Exclusividade</h4>
                     <p>Luxo, requinte e sofisticação nos melhores bairros da zona sul da cidade.</p></div>
                 
             </div>

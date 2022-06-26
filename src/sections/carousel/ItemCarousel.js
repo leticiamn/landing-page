@@ -17,9 +17,6 @@ class ItemCarousel extends Component {
             </div>
         );
     }
-    componentDidMount() {
-        
-    }
 }
 
 export default ItemCarousel;
