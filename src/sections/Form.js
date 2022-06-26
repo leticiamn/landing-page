@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -26,44 +25,24 @@ class Form extends Component {
 
     verify = () => {
         if (!this.state.nome) {
-            document.getElementById("error").setAttribute("className", "error");
+            
             document.getElementById("error").innerHTML = "Insira um nome válido!";
         }
 
         else if (!this.state.telefone) {
-            document.getElementById("error").setAttribute("className", "error");
+            document.getElementById("error").setAttribute("class", "error");
             document.getElementById("error").innerHTML = "Insira um telefone válido!";
         }
 
         else if (!this.state.email) {
-            document.getElementById("error").setAttribute("className", "error");
+            document.getElementById("error").setAttribute("class", "error");
             document.getElementById("error").innerHTML = "Insira um email válido!";
         }
 
         else {
-            // axios({
-            //     method: "post",
-            //     url: "/form",
-            //     baseURL: "https://projetocamilla.herokuapp.com/",
-            //     headers: {
-            //         'Access-Control-Allow-Private-Network': true,
-            //         'Access-Control-Allow-Origin': '*',
-            //         'content-type': 'application/json'
-            //     },
-            //     body: JSON.stringify(this.state)
-            // })
-            // .then(function (response) {
-            //     console.log(response);
-            // })
-            // .catch(function (error) {
-            //     console.error(error);
-            // });
             fetch('https://projetocamilla.herokuapp.com/form', {
                 method: 'POST',
-                body: JSON.stringify(this.state),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+                body: JSON.stringify(this.state)
             });
         }
     }
