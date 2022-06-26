@@ -6,9 +6,12 @@ import Login from './Login';
 class App extends Component {
     render() {
         return (
-            <div>
-                <Page />
-            </div>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Page/>}/>
+                    <Route path="/adm" element={<Login/>}/>
+                </Routes>
+            </Router>
         );
     }
 }
