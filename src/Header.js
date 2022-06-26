@@ -13,16 +13,14 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <div class="header">
-                    <div class="logo">
+                <div className="header">
+                    <div className="logo">
                         <img src="./img/logo.png" alt="Camilla Rocha" />
                     </div>
-                    <div class="social">
-                        <a href="#"><img src="./img/icons/instagram.png" alt="Instagram" onMouseEnter={this.color} onMouseLeave={this.notColor}/>
+                    <div className="social">
+                        <a href="https://www.instagram.com/camillarochapaula/" target="_blank"><img src="./img/icons/instagram.png" alt="Instagram" onMouseEnter={this.color} onMouseLeave={this.notColor}/>
                         </a>
-                        <a href="#"><img src="./img/icons/facebook.png" alt="Facebook" onMouseEnter={this.color} onMouseLeave={this.notColor}/>
-                        </a>
-                        <a href="#"><img src="./img/icons/linkedin.png" alt="LinkedIn" onMouseEnter={this.color} onMouseLeave={this.notColor}/>
+                        <a href="https://www.facebook.com/camilla.rocha.7528" target="_blank"><img src="./img/icons/facebook.png" alt="Facebook" onMouseEnter={this.color} onMouseLeave={this.notColor}/>
                         </a>
                     </div>
                 </div>

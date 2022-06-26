@@ -1,13 +1,42 @@
 import React, { Component } from 'react';
-import './css/style.css';
-
+import { auth, signInWithGoogle} from "./firebase";
 class Login extends Component {
+
+    constructor() {
+        super();
+    
+        this.state = {
+          currentUser: null
+        };
+      }
+    
+    unsubscribeFromAuth = null;
+
+    componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+        this.setState({ currentUser: user });
+    });
+    }
+
+    componentWillUnmount() {
+    this.unsubscribeFromAuth();
+    }
+    
     render() {
         return (
-            <form class="form">
-                <input type="text" name="user" id="user" placeholder="Usuário" />
-                <input type="password" name="password" id="password" placeholder="Senha"/>
-            </form>
+            <div>
+               {
+                this.state.currentUser ?
+                (<div>
+                    <div>Name: {this.state.currentUser.displayName}</div>
+                    <div>Email: {this.state.currentUser.email}</div>
+                    <button onClick={() => auth.signOut()}>LOG OUT</button>
+                </div>
+                ) :
+
+                <button onClick={signInWithGoogle}>SIGN IN WITH GOOGLE</button>
+                } 
+            </div>
         );
     }
 }

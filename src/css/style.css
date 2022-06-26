@@ -9,10 +9,6 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.none {
-    display: none;
-}
-
 .opacity {
     opacity: 0;
 }
@@ -95,11 +91,42 @@
     line-height: 29px;
     text-align: center;
     cursor: pointer;
+    animation: animBtnReverse 0.3s ease-out 0s 1 reverse none;
+}
+
+@keyframes animBtnReverse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		transform: scale(1);
+	}
+
+	100% {
+		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+		transform: scale(1.1);
+	}
 }
 
 .call-mid input[type=button] {
     margin-top: 5vh;
     width: 75%;
+}
+
+.call-mid input[type=button]:hover, .form form input[type=button]:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+	transform: scale(1.1);
+    animation: animBtn 1s linear 0s 1 normal none;
+}
+
+@keyframes animBtn {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		transform: scale(1);
+	}
+
+	100% {
+		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+		transform: scale(1.1);
+	}
 }
 
 .call-section {
