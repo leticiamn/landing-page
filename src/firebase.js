@@ -3,7 +3,7 @@ import {GoogleAuthProvider,getAuth,signInWithPopup,signOut} from 'firebase/auth'
 
 const firebaseConfig = {
     apiKey: "AIzaSyAg_JWqpFxe7Q46J9YwTd2WZsUnUQgsm-s",
-    authDomain: "projeto-camilla.firebaseapp.com",
+    authDomain: "camillarocha.herokuapp.com",
     projectId: "projeto-camilla",
     storageBucket: "projeto-camilla.appspot.com",
     messagingSenderId: "766086089715",
