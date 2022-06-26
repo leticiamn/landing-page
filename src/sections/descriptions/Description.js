@@ -8,7 +8,7 @@ class Description extends Component {
     
     render() {
         return (
-            <div class="description-section">
+            <div className="description-section">
                 <h2>Há diversas oportunidades na ZONA SUL</h2>
                 <h3>SEJA PARA MORAR OU INVESTIR, EU POSSO TE AJUDAR!</h3>
                 <Products/>

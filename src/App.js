@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Page from './Page';
 import Login from './Login';
-import LoggedUser from './LoggedUser';
 
 class App extends Component {
     render() {

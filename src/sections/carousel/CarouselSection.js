@@ -13,7 +13,7 @@ class CarouselSection extends Component {
     render() {
         return (
             <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
-                <div class="item"><ItemCarousel
+                <div className="item"><ItemCarousel
                     name={this.state.itens[0].name}
                     image={this.state.itens[0].image}                    
                     p1={this.state.itens[0].p1}
@@ -23,7 +23,7 @@ class CarouselSection extends Component {
                     p5={this.state.itens[0].p5}
                 /></div>
 
-                <div class="item"><ItemCarousel
+                <div className="item"><ItemCarousel
                     name={this.state.itens[1].name}
                     image={this.state.itens[1].image}                    
                     p1={this.state.itens[1].p1}
@@ -33,7 +33,7 @@ class CarouselSection extends Component {
                     p5={this.state.itens[1].p5}
                 /></div>
 
-                <div class="item"><ItemCarousel
+                <div className="item"><ItemCarousel
                     name={this.state.itens[2].name}
                     image={this.state.itens[2].image}                    
                     p1={this.state.itens[2].p1}

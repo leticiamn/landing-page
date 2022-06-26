@@ -175,6 +175,11 @@
     font-size: 34px;
 }
 
+.products div {
+    display: flex;
+    flex-direction: column;
+}
+
 .description-section p {
     font-family: 'Source Sans 3';
     font-style: normal;
@@ -194,6 +199,16 @@
     cursor: pointer;
 }
 
+.description-section input[type="button"]:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.voltar {
+    position: relative;
+    top: -15vh;
+    left: 22vw;
+    width: 40vw;
+}
 .benefits-section {
     margin: 2vh auto;
     width: 80vw;
@@ -271,7 +286,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    margin: 2vh;
+    margin: 2vh 0;
 }
 
 .item-carousel p {
@@ -281,6 +296,7 @@
     font-size: 20px;
     color: #282828;
     margin: 2vh auto;
+    text-align: justify;
 }
 
 /****************4th section - form*****************/

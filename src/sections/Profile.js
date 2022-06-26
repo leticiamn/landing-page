@@ -4,7 +4,7 @@ class Profile extends Component {
     render() {
         return (
             <div>
-                <div class="profile">
+                <div className="profile">
                     <img src="./img/camilla.jpeg" alt="Camilla Rocha – Assessora de Imóveis" />
                     <div>
                         <h2>Compromisso em encontrar o seu imóvel perfeito.</h2>

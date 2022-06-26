@@ -3,6 +3,8 @@ import Product from './Product'
 import products from './products.json';
 import details from './details.json';
 import Details from './Details';
+import '../../css/style.css';
+import '../../css/responsive.css';
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -32,24 +34,28 @@ export default class Products extends Component {
           <div>
               {
                 this.state.activeDetails === false ? (
-                    <div className="products">
-                        <Product name={this.state.products.products[0].name} image={this.state.products.products[0].image} description={this.state.products.products[0].description} />
-                        <input name={this.state.products.products[0].name} type="button" value="VEJA MAIS" onClick={this.details} />
-    
-                        <Product name={this.state.products.products[1].name} image={this.state.products.products[1].image} description={this.state.products.products[1].description} />
-                        <input name={this.state.products.products[1].name} type="button" value="VEJA MAIS" onClick={this.details} />
-        
-                        <Product name={this.state.products.products[2].name} image={this.state.products.products[2].image} description={this.state.products.products[2].description} />
-                        <input name={this.state.products.products[2].name} type="button" value="VEJA MAIS" onClick={this.details} />
+                      <div className="products">
+                        <div>
+                            <Product name={this.state.products.products[0].name} image={this.state.products.products[0].image} description={this.state.products.products[0].description} />
+                            <input name={this.state.products.products[0].name} type="button" value="VEJA MAIS" onClick={this.details} />
+                        </div>
+                        <div>
+                            <Product name={this.state.products.products[1].name} image={this.state.products.products[1].image} description={this.state.products.products[1].description} />
+                            <input name={this.state.products.products[1].name} type="button" value="VEJA MAIS" onClick={this.details} />
+                        </div>
+                        <div>
+                            <Product name={this.state.products.products[2].name} image={this.state.products.products[2].image} description={this.state.products.products[2].description} />
+                            <input name={this.state.products.products[2].name} type="button" value="VEJA MAIS" onClick={this.details} />
+                        </div>
                     </div>
                   ) : (
                         <div>
-                          <input type="button" value="Voltar" onClick={this.voltar} />
                             <Carousel infiniteLoop useKeyboardArrows showThumbs={false}>
-                                {this.state.details.item.map((dt) =>
-                                    <Details name={dt.name} image={dt.image} description={dt.description} />
-                                )}
-                            </Carousel>
+                                  {this.state.details.item.map((dt,index) =>
+                                      <Details key={index} name={dt.name} image={dt.image} description={dt.description} />
+                                  )}
+                              </Carousel>
+                              <input className="voltar" type="button" value="Voltar" onClick={this.voltar} />
                         </div>
                 )}
         </div>

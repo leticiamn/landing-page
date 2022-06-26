@@ -1,14 +1,16 @@
 import React, { Component } from 'react';   
-import Products from './Products';
-
+import '../../css/style.css';
+import '../../css/responsive.css';
 export default class Details extends Component {
 
   render() {
     return (
-      <div class="item-carousel">
+      <div className="item-carousel">
         <img src={this.props.image} alt="" />
-        <h2>{this.props.name}</h2>
-        <p>{this.props.description}</p>
+        <div>
+          <h2>{this.props.name}</h2>
+          <p>{this.props.description}</p>
+        </div>
       </div>
     )  
   }
