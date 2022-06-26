@@ -30,7 +30,12 @@ class Login extends Component {
                 (<div>
                     <div>Name: {this.state.currentUser.displayName}</div>
                     <div>Email: {this.state.currentUser.email}</div>
-                    <button onClick={() => auth.signOut()}>LOG OUT</button>
+                            <button onClick={() => auth.signOut()}>LOG OUT</button>
+                            
+                            {fetch('https://projetocamilla.herokuapp.com/form')
+                                .then((response) => response.json())
+                                .then((json) => { return (<div>{json}</div>) })
+                                }
                 </div>
                 ) :
 
