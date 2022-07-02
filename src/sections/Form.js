@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +25,9 @@ class Form extends Component {
         
     }
 
+    redirect = () => {
+        useNavigate('/thankyou');
+    }
     verify = () => {
         if (!this.state.nome) {
             document.getElementById("error").innerHTML = "Insira um nome válido!";
@@ -37,13 +42,20 @@ class Form extends Component {
         }
 
         else {
-            fetch('https://projetocamilla.herokuapp.com/form', {
+            
+            fetch('http://localhost:8080/form/cadastro', {
                 method: 'POST',
                 body: JSON.stringify(this.state),
                 headers: {
                     'Content-Type': 'application/json'
                 }
+            })
+                .then(function (response) {
+                    if (response.ok) this.redirect();
+
             });
+            
+
         }
     }
 
