@@ -1,43 +1,25 @@
-import React, { Component } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { Navigate } from 'react-router-dom';
 
-class Form extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {nome:'', telefone:'', email:''}
-      }
-    render() {
-        return (
-            <div  id="form" className="form" name="form">
-                <form>
-                    <h2>Compre agora</h2>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={this.getData}/>
-                    <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" onChange={this.getData}/>
-                    <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" onChange={this.getData} />
-                    <p id="error" className="error"></p>
-                    <input type="button" value="ENCONTRE SEU IMÓVEL" onClick={this.verify} />
-                </form>
-            </div>
-        );
-    }
-    getData = (event) => {
-        this.setState({[event.target.name]: event.target.value });
-        
+function Form() {
+    const[user,setUser] = useState({nome:'', telefone:'', email:''});
+    const [submitted, setSubmitted] = useState(false);
+
+    const getData = (event) => {
+        const { name, value } = event.target;
+        setUser({ ...user, [name]: value });        
     }
 
-    redirect = () => {
-        useNavigate('/thankyou');
-    }
-    verify = () => {
-        if (!this.state.nome) {
+    const verify = () => {
+        if (!user.nome) {
             document.getElementById("error").innerHTML = "Insira um nome válido!";
         }
 
-        else if (!this.state.telefone) {
+        else if (!user.telefone) {
             document.getElementById("error").innerHTML = "Insira um telefone válido!";
         }
 
-        else if (!this.state.email) {
+        else if (!user.email) {
             document.getElementById("error").innerHTML = "Insira um email válido!";
         }
 
@@ -45,20 +27,38 @@ class Form extends Component {
             
             fetch('http://localhost:8080/form/cadastro', {
                 method: 'POST',
-                body: JSON.stringify(this.state),
+                body: JSON.stringify(user),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
                 .then(function (response) {
-                    if (response.ok) this.redirect();
+                    if (response.ok) setSubmitted(true);
 
             });
-            
-
         }
     }
 
+    return (
+        <div>
+            {submitted ? (
+                <Navigate to = "/thankyou" replace = "true"/>
+            ) : (
+                    
+            <div  id="form" className="form" name="form">
+                <form>
+                    <h2>Compre agora</h2>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={getData}/>
+                    <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" onChange={getData}/>
+                    <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" onChange={getData} />
+                    <p id="error" className="error"></p>
+                    <input type="button" value="ENCONTRE SEU IMÓVEL" onClick={verify} />
+                </form>
+            </div>
+            )}
+        
+        </div>
+    );
     
 }
 
