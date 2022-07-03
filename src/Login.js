@@ -74,13 +74,15 @@ class Login extends Component {
         this.setState({ [event.target.name]: event.target.value });
     }
 
-    findByDate = () => {
-        console.log(JSON.stringify({"dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim }));
-        api
-            .buscaPeriodo(JSON.stringify({"dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim }))
-            .then((response) => {
-                console.log(response);
-              })
+    findByDate = async () => {
+        console.log(JSON.stringify({dataInicio: this.state.dataInicio, dataFim: this.state.dataFim}));
+        try {
+            const response = await api
+            .buscaPeriodo(JSON.stringify({dataInicio: this.state.dataInicio, dataFim: this.state.dataFim}))
+            console.log(response);
+        } catch (error) {
+            console.log(error)
+        }
     } 
 
     render() {
@@ -122,7 +124,7 @@ class Login extends Component {
             ) : (
                 <form className="form">
                     <input type="text" name="username" placeholder="Usuário" onChange={this.getUser}/>
-                    <input type="text" name="password" placeholder="senha" onChange={this.getPwd}/>
+                    <input type="password" name="password" placeholder="senha" onChange={this.getPwd}/>
                     <input type="button" onClick={this.signIn} value="Login"/>
                 </form>
                 )

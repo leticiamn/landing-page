@@ -8,6 +8,7 @@ import '../../css/responsive.css';
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {FlashCard} from '@lrnwebcomponents/flash-card/flash-card.js';
 
 export default class Products extends Component {
     constructor(props) {
@@ -50,12 +51,8 @@ export default class Products extends Component {
                     </div>
                   ) : (
                         <div>
-                            <Carousel infiniteLoop useKeyboardArrows showThumbs={false}>
-                                  {this.state.details.item.map((dt,index) =>
-                                      <Details key={index} name={dt.name} image={dt.image} description={dt.description} />
-                                  )}
-                              </Carousel>
-                              <input className="voltar" type="button" value="Voltar" onClick={this.voltar} />
+                        <FlashCard>teste</FlashCard>
+                              
                         </div>
                 )}
         </div>

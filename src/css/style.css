@@ -301,7 +301,8 @@
 
 /****************4th section - form*****************/
 .error {
-    color: red;
+    outline-style: dashed;
+    outline:red;
 }
 
 .form-invalido {
@@ -351,7 +352,7 @@
     font-size: 18px;
 }
 
-.form input[type="text"], .form input[type="email"] {
+.form input[type="text"], .form input[type="email"], .form input[type="tel"] {
     outline: none;
     border: none;
     width: 85%;

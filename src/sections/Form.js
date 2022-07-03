@@ -1,33 +1,35 @@
 import { useState } from "react";
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import validator from 'validator';
 
 function Form() {
     const[user,setUser] = useState({nome:'', telefone:'', email:''});
     const [submitted, setSubmitted] = useState(false);
-    const [verified, setVerified] = useState({nome:false, telefone:false, email:false});
+    const [emailVerified, setEmailVerified] = useState();
+    const [termsVerified, setTermsVerified] = useState();
+    const [nameVerified, setNameVerified] = useState();
+    const [phoneVerified, setPhoneVerified] = useState();
 
     const getData = (event) => {
-        const { name, value } = event.target;
-        setUser({ ...user, [name]: value });        
+        const { name, value, checked } = event.target;
+        if (name == 'terms') {           
+            if (checked) setTermsVerified(true);
+            else setTermsVerified(false);
+        }
+        else
+            setUser({ ...user, [name]: value });
+        
     }
 
     const verify = (event) => {
-        console.log(user);
-        if (!user.nome) {
-            document.getElementById("error").innerHTML = "Insira um nome válido!";
-            setVerified({ ...verified, name: true }); 
-        }
+        if (validator.isEmail(user.email)) setEmailVerified(true);
+        else setEmailVerified(false);
+        if (validator.isMobilePhone(user.telefone, 'pt-BR')) setPhoneVerified(true);
+        else setPhoneVerified(false);
+        if (!validator.isEmpty(user.nome)) setNameVerified(true);
+        else setNameVerified(false);
 
-        else if (!user.telefone) {
-            document.getElementById("error").innerHTML = "Insira um telefone válido!";
-        }
-
-        else if (!user.email) {
-            document.getElementById("error").innerHTML = "Insira um email válido!";
-        }
-
-        else {
-            
+        if (emailVerified && nameVerified && phoneVerified && termsVerified)
             fetch('http://localhost:8080/form/cadastro', {
                 method: 'POST',
                 body: JSON.stringify(user),
@@ -37,9 +39,9 @@ function Form() {
             })
                 .then(function (response) {
                     if (response.ok) setSubmitted(true);
-
-            });
-        }
+                });
+        else alert('Error');
+    
     }
 
     return (
@@ -51,15 +53,19 @@ function Form() {
             <div  id="form" className="form" name="form">
                 <form>
                     <h2>Encontre seu imóvel</h2>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={getData}/>
+                            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={getData} />
                     
-                    <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" onChange={getData}/>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" minLength="8" onChange={getData}/>
                     
                     <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" onChange={getData} />
                     
-                    <p id="error" className="error"></p>
+                    <label>
+                        <input type="checkbox" name="terms" id="terms" value="Terms" onChange={getData}/>
+                        Li e aceito os <Link to= "/terms"> termos e condições</Link>.
+                    </label>
                     
-                    <input type="button" value="PEDIR AJUDA" onClick={verify} />
+                    <input type="button" value="ENTRE EM CONTATO" onClick={verify} />
+                        
                 </form>
             </div>
             )}
