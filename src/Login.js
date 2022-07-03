@@ -75,10 +75,9 @@ class Login extends Component {
     }
 
     findByDate = () => {
-        console.log(JSON.stringify({ "DateConsult": { "dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim } }));
+        console.log(JSON.stringify({"dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim }));
         api
-            .buscaPeriodo(JSON.stringify({ "DateConsult": {"dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim }
-}))
+            .buscaPeriodo(JSON.stringify({"dataInicio": this.state.dataInicio, "dataFim": this.state.dataFim }))
             .then((response) => {
                 console.log(response);
               })

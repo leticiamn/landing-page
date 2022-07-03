@@ -4,15 +4,18 @@ import { Navigate } from 'react-router-dom';
 function Form() {
     const[user,setUser] = useState({nome:'', telefone:'', email:''});
     const [submitted, setSubmitted] = useState(false);
+    const [verified, setVerified] = useState({nome:false, telefone:false, email:false});
 
     const getData = (event) => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });        
     }
 
-    const verify = () => {
+    const verify = (event) => {
+        console.log(user);
         if (!user.nome) {
             document.getElementById("error").innerHTML = "Insira um nome válido!";
+            setVerified({ ...verified, name: true }); 
         }
 
         else if (!user.telefone) {
@@ -47,12 +50,16 @@ function Form() {
                     
             <div  id="form" className="form" name="form">
                 <form>
-                    <h2>Compre agora</h2>
+                    <h2>Encontre seu imóvel</h2>
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo" onChange={getData}/>
+                    
                     <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (WhatsApp)" onChange={getData}/>
+                    
                     <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" onChange={getData} />
+                    
                     <p id="error" className="error"></p>
-                    <input type="button" value="ENCONTRE SEU IMÓVEL" onClick={verify} />
+                    
+                    <input type="button" value="PEDIR AJUDA" onClick={verify} />
                 </form>
             </div>
             )}

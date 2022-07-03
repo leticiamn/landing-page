@@ -304,6 +304,11 @@
     color: red;
 }
 
+.form-invalido {
+    outline: 1px solid red;
+    background-color: rgba(196, 14, 14, 0.5);
+}
+
 .form {
     background-image: url(/public/img/form_background.png);
     background-repeat: no-repeat;
@@ -440,12 +445,6 @@
     font-weight: 400;
     font-size: 16px;
     margin: 5px;
-}
-
-.footer p:first-child {
-    font-weight: 700;
-    font-size: 20px;
-    margin: 10px;
 }
 
 .footer p:last-child {

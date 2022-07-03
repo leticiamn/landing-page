@@ -23,8 +23,10 @@ export const create = (data) => {
 };
 
 export const buscaPeriodo = (data) => {
-    return httpClient.post("/form/buscaPeriodo", {
-        body: data
+  return httpClient.post("/form/buscaPeriodo", {
+      responseType: "blob",
+      headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken"),"Content-type": "application/json" },
+      body: data
     });
 };
   
