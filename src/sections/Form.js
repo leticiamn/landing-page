@@ -30,7 +30,7 @@ function Form() {
         else setNameVerified(false);
 
         if (emailVerified && nameVerified && phoneVerified && termsVerified)
-            fetch('http://localhost:8080/form/cadastro', {
+            fetch('https://projetocamilla.herokuapp.com/form/cadastro', {
                 method: 'POST',
                 body: JSON.stringify(user),
                 headers: {

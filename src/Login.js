@@ -98,7 +98,7 @@ class Login extends Component {
                     <input type="date" name="dataInicio" onChange={this.getDate} />
                     <input type="date" name="dataFim" onChange={this.getDate} />
                             
-                    <input type="button" onClick={this.findByDate} value="Exportar" />
+                    <input type="button" onClick={this.findByDate} value="Buscar período" />
                 </div>
             <table>
             <thead>
