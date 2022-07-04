@@ -59,16 +59,16 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 15px;
 }
 
 .call h1 {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 46px;
+    font-size: 42px;
     line-height: 155.02%;
     color: #647B75;
+    margin: 0 5vw;
 }
 .call-mid span {
     display: block;
@@ -114,7 +114,7 @@
 .call-mid input[type=button]:hover, .form form input[type=button]:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
 	transform: scale(1.1);
-    animation: animBtn 1s linear 0s 1 normal none;
+    animation: animBtn 0.5s linear 0s 1 normal none;
 }
 
 @keyframes animBtn {
@@ -159,27 +159,26 @@
     margin: 5vh auto;
 }
 
-.products img {
+.products img {    
     object-fit: cover;
     border-radius: 12px;
-    width: 80vw;
-    height: 290px;
-}
-
-.products p {
-    margin: 1vh auto;
-    min-height: 44.8px; 
+    width: 79vw;
+    max-width: 100%;
+    height: 79vw;
 }
 
 .products h4 {
-    font-size: 34px;
+    font-size: 34px; 
 }
 
 .products div {
     display: flex;
     flex-direction: column;
 }
-
+.card-product {
+    background-color: #FFFFFF;
+    border: none;
+}
 .description-section p {
     font-family: 'Source Sans 3';
     font-style: normal;

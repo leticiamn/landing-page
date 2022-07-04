@@ -121,12 +121,14 @@ class Login extends Component {
             </tbody>
           </table>
                 </div>
-            ) : (
-                <form className="form">
-                    <input type="text" name="username" placeholder="Usuário" onChange={this.getUser}/>
-                    <input type="password" name="password" placeholder="senha" onChange={this.getPwd}/>
-                    <input type="button" onClick={this.signIn} value="Login"/>
-                </form>
+                    ) : (
+                <div  className="form">
+                    <form className="form">
+                        <input type="text" name="username" placeholder="Usuário" onChange={this.getUser}/>
+                        <input type="password" name="password" placeholder="senha" onChange={this.getPwd}/>
+                        <input type="button" onClick={this.signIn} value="Login"/>
+                    </form>
+                </div>           
                 )
                 } 
             </div>

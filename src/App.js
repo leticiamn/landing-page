@@ -4,6 +4,7 @@ import Page from './Page';
 import Login from './Login';
 import ThankYou from './ThankYou';
 import Terms from './sections/descriptions/Terms';
+import './css/style.css';
 class App extends Component {
     render() {
         return (

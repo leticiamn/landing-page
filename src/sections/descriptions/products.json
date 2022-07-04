@@ -7,11 +7,11 @@
     {
         "name":"Apartamentos", 
         "image":"../img/products/apartamento.jpg", 
-        "description":"Apartamentos de alto padrão localizados na Zona Sul de Uberlândia."
+        "description":"Apartamentos de alto padrão."
     },
     {
         "name":"Terrenos", 
         "image":"../img/products/terreno.jpg", 
-        "description":"Lotes comerciais e residenciais em ótimos bairros e condomínios."
+        "description":"Lotes comerciais e residenciais."
     }
 ]}
