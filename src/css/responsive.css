@@ -102,13 +102,22 @@
     }
     
     .form {
-        min-height: 100vh;
+        min-height: 101vh;
     }
 
     .form form {
         width: 35vw;
         height: 70vh;
         margin-left: 50vw;
+    }
+
+    .login-form form {
+        margin: auto !important; 
+        max-height: 85vw;
+    }
+
+    div.login-form {
+        max-height: 50vh !important;
     }
 
     .profile {
@@ -123,8 +132,7 @@
     }
 
     .profile div {
-        padding-top: 2%;
-        padding-bottom: 2%;
+        align-self: flex-start;
     }
 
     .profile h2 {
