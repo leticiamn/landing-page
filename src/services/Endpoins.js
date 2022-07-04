@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-  baseURL: "http://https://projetocamilla.herokuapp.com/",
+  baseURL: "https://projetocamilla.herokuapp.com/",
   headers: {
     "Content-type": "application/json",
   },
@@ -24,10 +24,10 @@ export const create = (data) => {
 
 export const buscaPeriodo = (data) => {
   return httpClient.post("/form/buscaPeriodo", data, {
-      headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken"),"Content-type": "application/json" }
-    });
+    headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken"), "Content-type": "application/json" }
+  });
 };
-  
+
 export const login = (data) => {
   return httpClient.post(
     "/token",
