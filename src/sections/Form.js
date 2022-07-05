@@ -77,23 +77,27 @@ const Form = () => {
             ) : (
 
                 <div id="form" className="form" name="form">
+
                     <form onSubmit={preventDefault}>
                         <h2>Encontre seu imóvel</h2>
 
-                        <input type="text" {...name.inputProps} />
-                        {name.error && <p>{name.error}</p>}
+                        <input className={name.error == '' ? "erro" : ""} placeholder='Seu nome' type="text" {...name.inputProps} />
+                        <div >
+                            {name.error && <p>{name.error}</p>}</div>
 
-                        <input type="email" {...email.inputProps} />
-                        {email.error && <p>{email.error}</p>}
+                        <input placeholder='Seu melhor e-mail' type="email" {...email.inputProps} />
+                        <div>{email.error && <p>{email.error}</p>}</div>
 
-                        <input type="tel" {...phone.inputProps} />
-                        {phone.error && <p>{phone.error}</p>}
+                        <input placeholder='Telefone (WhatsApp)' type="tel" {...phone.inputProps} />
+                        <div>{phone.error && <p>{phone.error}</p>}</div>
+
 
                         <label htmlFor={terms.name}>
                             <input type="checkbox" {...terms.inputProps} />
                             <span>Eu aceito os <Link to="/terms">termos e condições</Link>.</span>
                         </label>
-                        {terms.error && <p>{terms.error}</p>}
+                        <div>{terms.error && <p>{terms.error}</p>}</div>
+
                         <button button type="submit" >ENTRE EM CONTATO</button>
                     </form>
                 </div>

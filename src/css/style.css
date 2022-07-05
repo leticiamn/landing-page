@@ -360,12 +360,17 @@
     margin: 2vh auto;
 }
 
-.form form input[type=button] {
+.form form input[type=button], .form button {
     margin-top: 4vh;
     max-width: 85%;
     width: 85%;
     font-size: 18px;
     margin: 2vh auto;
+}
+
+
+.form input {
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
 }
 
 .form input[type="text"], .form input[type="email"], .form input[type="tel"], .form input[type="password"] {
@@ -473,4 +478,9 @@
 .footer p:last-child {
     font-size: 20px;
     margin: 10px;
+}
+
+.erro {
+    border: 2px solid red !important;
+    opacity: 0;
 }
