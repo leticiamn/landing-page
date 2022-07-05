@@ -75,7 +75,7 @@
     color: #613046;
 }
 
-.call-mid input[type=button], .form form input[type=button] {
+.call-mid input[type=button], .form form input[type=button], .form button {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -111,7 +111,7 @@
     width: 75%;
 }
 
-.call-mid input[type=button]:hover, .form form input[type=button]:hover {
+.call-mid input[type=button]:hover, .form form input[type=button]:hover, .form button:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
 	transform: scale(1.1);
     animation: animBtn 0.5s linear 0s 1 normal none;
