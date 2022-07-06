@@ -23,7 +23,7 @@ class Header extends Component {
                         <a href="https://www.facebook.com/camilla.rocha.7528" target="_blank"><img src="./img/icons/facebook.png" alt="Facebook" onMouseEnter={this.color} onMouseLeave={this.notColor} />
                         </a>
                     </div>
-                    <a className="wpp" href="https://contate.me/camilla.rocha"><img src="./img/whatsapp.png" alt="Whatsapp" /></a>
+
                 </div>
             </header>
         );

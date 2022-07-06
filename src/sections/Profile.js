@@ -11,11 +11,11 @@ class Profile extends Component {
                         <h3>Camilla Rocha – Assessora de Imóveis de Alto Padrão na Zona Sul de Uberlândia</h3>
                         <p><span>MEU OBJETIVO:</span> Tornar seu sonho realidade é o meu compromisso há mais de 13 anos. </p>
                         <p><span>MISSÃO:</span> Encontrar um imóvel que atenda as expectativas do meu cliente.</p>
-                        <p><span>OPORTUNIDADE:</span> Acredito na na criação de valor que gero com o meu atendimento, atuando como agente imobiliário, identificando as principais dores e contribuindo decisivamente para o sucesso de cada um dos meus clientes.</p>
+                        <p><span>OPORTUNIDADE:</span> Acredito na criação de valor que gero com o meu atendimento, atuando como agente imobiliário, identificando as principais dores e contribuindo decisivamente para o sucesso de cada um dos meus clientes.</p>
                         <p><span>RESULTADOS:</span> Busca entender o tamanho exato do desejo/objetivo/sonho do meu cliente e quais os caminhos possíveis para realizá-lo, considerando o  estilo e a necessidade de cada cliente.</p>
-                        <p><span>COMPROMISSO</span> é a minha palavra ordem que define os passos para lidar com cada etapa desse processo.  Comigo você encontrará, profissionalismo, respeito e seu imóvel!!</p>
+                        <p><span>COMPROMISSO</span> é a palavra ordem que define os passos para lidar com cada etapa deste processo.  Comigo você encontrará profissionalismo, respeito e seu imóvel!!</p>
                     </div>
-               </div> 
+                </div>
             </div>
         );
     }
