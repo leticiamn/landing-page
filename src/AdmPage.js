@@ -20,10 +20,6 @@ class AdmPage extends Component {
         this.getLeads();
     }
 
-    componentWillUnmount() {
-        localStorage.setItem("jwtToken", null);
-    }
-
     signOut = () => {
         localStorage.setItem("jwtToken", null);
         this.setState({ currentUser: false });
@@ -36,7 +32,7 @@ class AdmPage extends Component {
                 this.setState({ leads: response.data });
             })
             .catch((e) => {
-                alert(e.message);
+                this.setState({ leads: [] });
             });
     }
 
@@ -47,7 +43,7 @@ class AdmPage extends Component {
                 FileDownload(response.data, "leads.xlsx");
             })
             .catch((e) => {
-                console.log(e);
+                alert("Sinto muito! Algo de errado aconteceu, tente novamente mais tarde.")
             });
     }
 
@@ -69,17 +65,19 @@ class AdmPage extends Component {
             <div className="adm">
                 {!this.state.currentUser ? (
                     <Navigate to="/" />
-                ) : (<div><div>Seja bem-vindo!</div></div>)}
+                ) : (<div><h2>Seja bem-vindo!</h2></div>)}
 
-                <input type="button" onClick={this.signOut} value="Log out" />
-                <input type="button" onClick={this.getExcel} value="Exportar" />
-                <div>
-                    <input type="date" name="dataInicio" onChange={this.getDate} />
-                    <input type="date" name="dataFim" onChange={this.getDate} />
+                <input className="out" type="button" onClick={this.signOut} value="Log out" />
+                <div className="buscas">
+                    <div>
+                        <input type="date" name="dataInicio" onChange={this.getDate} />
+                        <input type="date" name="dataFim" onChange={this.getDate} />
 
-                    <input type="button" onClick={this.findByDate} value="Buscar período" />
+                        <input type="button" onClick={this.findByDate} value="Buscar período" />
+                    </div>
+                    <input type="button" onClick={this.getExcel} value="Exportar" />
                 </div>
-                {this.state.leads == [] ? (<p>Carregando...</p>) : (
+                {!this.state.leads[0] ? (<h3>Carregando...</h3>) : (
                     <table>
                         <thead>
                             <tr>
@@ -101,7 +99,7 @@ class AdmPage extends Component {
                         </tbody>
                     </table>
                 )}
-
+                <footer className="footer fixed"><p>©2022</p></footer>
             </div>
         );
     }

@@ -81,22 +81,30 @@ const Form = () => {
                     <form onSubmit={preventDefault}>
                         <h2>Encontre seu imóvel</h2>
 
-                        <input className={name.error == '' ? "erro" : ""} placeholder='Seu nome' type="text" {...name.inputProps} />
-                        <div >
-                            {name.error && <p>{name.error}</p>}</div>
+                        <input style={name.error ? {
+                            backgroundColor: "rgba(163,55,84,0.4)"
+                        } : {}} placeholder='Seu nome' type="text" {...name.inputProps} />
+                        <div style={name.error ? { opacity: "1" } : { opacity: "0" }}>
+                            {name.error && (name.error)}.</div>
 
-                        <input placeholder='Seu melhor e-mail' type="email" {...email.inputProps} />
-                        <div>{email.error && <p>{email.error}</p>}</div>
+                        <input style={email.error ? {
+                            backgroundColor: "rgba(163,55,84,0.4)", color: "#ffff"
+                        } : {}} placeholder='Seu melhor e-mail' type="email" {...email.inputProps} />
+                        <div style={email.error ? { opacity: "1" } : { opacity: "0" }}>{email.error && (email.error)}.</div>
 
-                        <input placeholder='Telefone (WhatsApp)' type="tel" {...phone.inputProps} />
-                        <div>{phone.error && <p>{phone.error}</p>}</div>
+                        <input style={phone.error ? {
+                            backgroundColor: "rgba(163,55,84,0.4)"
+                        } : {}} placeholder='Telefone (WhatsApp)' type="tel" {...phone.inputProps} />
+                        <div style={phone.error ? { opacity: "1" } : { opacity: "0" }}>{phone.error && (phone.error)}.</div>
 
 
-                        <label htmlFor={terms.name}>
+                        <label htmlFor={terms.name} className="cont">
+
                             <input type="checkbox" {...terms.inputProps} />
+                            <span className="checkmark"></span>
                             <span>Eu aceito os <Link to="/terms">termos e condições</Link>.</span>
                         </label>
-                        <div>{terms.error && <p>{terms.error}</p>}</div>
+                        <div style={terms.error ? { opacity: "1" } : { opacity: "0" }}>{terms.error && (terms.error)}.</div>
 
                         <button type="submit" >ENTRE EM CONTATO</button>
                     </form>

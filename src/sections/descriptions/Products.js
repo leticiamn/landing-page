@@ -30,7 +30,10 @@ export default class Products extends Component {
             key={card.id}
             card={card}
             front={
-              <div>
+              <div style={{
+                width: "inherit",
+                maxHeight: "100%",
+              }}>
                 <Product
                   name={this.state.products.products[0].name}
                   image={this.state.products.products[0].image}

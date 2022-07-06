@@ -4,18 +4,20 @@
         justify-content: flex-end
     }
 
-    .header img {
+    .header .logo img {
         width: 155px;
         height: 70px;
         float: right;
     }
 
     .logo {
-        float: none;
+        justify-self: center !important;
+        display: block;
+        margin: auto;
+    }
+
+    .social {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .social img {
@@ -87,8 +89,10 @@
     }
 
     .item-carousel img, .item-carousel div {
-        max-width: 35vw;
-        height: 35vw;
+        max-width: 500px !important;
+        max-height: 500px !important;
+        max-width: 30vw;
+        height: 30vw;
         margin: auto;
     }
 

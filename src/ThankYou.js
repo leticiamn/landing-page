@@ -8,9 +8,11 @@ class ThankYou extends Component {
         return (
             <div>
                 <Header />
-                <div className="profile">
-                    <h2>Obrigada por se cadastrar!</h2>  
-                    <Link to="/">Cadastrar novamente!</Link>
+                <div className="profile thankyou">
+                    <h2>Obrigada!</h2>
+                    <h3>Entraremos em contato o mais breve possível.</h3>
+                    <Link to="/">Voltar</Link>
+                    <footer className="footer fixed"><p>©2022</p></footer>
                 </div>
             </div>
         );
