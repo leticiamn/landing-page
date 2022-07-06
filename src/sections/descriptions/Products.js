@@ -44,7 +44,7 @@ export default class Products extends Component {
               </div>
             }
             back={
-              <div>
+              <div className="back-container">
                 {this.state.products.products[0].details}{" "}
                 <input name="voltar" type="button" value="VOLTAR" />
               </div>

@@ -138,7 +138,6 @@
 }
 
 /****************2nd section - description*****************/
-
 .description-section h2 {
     font-size: 40px;
 }
@@ -196,6 +195,7 @@
     background: none;
     padding: 5px 100px;
     cursor: pointer;
+    justify-self: flex-end;
 }
 
 .description-section input[type="button"]:hover {
@@ -400,11 +400,17 @@
     margin: 10px auto;
 }
 /***************5th section - perfil*****************/
-
-.profile {
+.adm, .profile {
     background-image: url(/public/img/bg-logo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.adm {
+
+}
+
+.profile {
     min-height: 84vh;
     display: flex;
     justify-content: center;
@@ -465,6 +471,7 @@
     background: #3E504B;
     text-align: center;
     padding: 1vh;
+    
 }
 
 .footer p {

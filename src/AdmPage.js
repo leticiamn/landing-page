@@ -56,24 +56,22 @@ class AdmPage extends Component {
     }
 
     findByDate = async () => {
-        console.log(JSON.stringify({ dataInicio: this.state.dataInicio, dataFim: this.state.dataFim }));
         try {
             const response = await api
-                .buscaPeriodo(JSON.stringify({ dataInicio: this.state.dataInicio, dataFim: this.state.dataFim }))
-            console.log(response);
+                .buscaPeriodo(JSON.stringify({ dataInicio: this.state.dataInicio, dataFim: this.state.dataFim }));
+            this.setState({ leads: response.data });
         } catch (error) {
-            console.log(error)
+            alert("Algo deu errado, tente novamente mais tarde!");
         }
     }
     render() {
         return (
-            <div>
+            <div className="adm">
                 {!this.state.currentUser ? (
                     <Navigate to="/" />
                 ) : (<div><div>Seja bem-vindo!</div></div>)}
 
                 <input type="button" onClick={this.signOut} value="Log out" />
-                <input type="button" onClick={this.getLeads} value="Busca leads" />
                 <input type="button" onClick={this.getExcel} value="Exportar" />
                 <div>
                     <input type="date" name="dataInicio" onChange={this.getDate} />

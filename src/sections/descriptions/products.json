@@ -2,16 +2,19 @@
     {
         "name":"Casas", 
         "image":"../img/products/casa.jpg", 
-        "description":"Casas e condomínios horizontais."
+        "description":"Casas e condomínios horizontais.",
+        "details": "Viver na zona sul de Uberlândia é habitar com conforto e usufruir com prazer. Se você procura imoveis em condomínio fechado, ofereço excelentes oportunidades para quem quer residir em um local reservado, com excelente espaço, segurança e espaço de lazer, rodeado pelos principais centros de comércios da região!"
     },
     {
         "name":"Apartamentos", 
         "image":"../img/products/apartamento.jpg", 
-        "description":"Apartamentos de alto padrão."
+        "description":"Apartamentos de alto padrão.",
+        "details": "Viver é mais do que morar, meu objetivo é buscar projetos pensados para quem busca o máximo de conforto e sossego para toda a família."
     },
     {
         "name":"Terrenos", 
         "image":"../img/products/terreno.jpg", 
-        "description":"Lotes comerciais e residenciais."
+        "description":"Lotes comerciais e residenciais.",
+        "details": "Experimente e permita-se conhecer uma nova proposta de moradia de alto padrão."
     }
 ]}
