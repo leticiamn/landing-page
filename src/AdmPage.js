@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import FileDownload from "js-file-download";
 import * as api from './services/Endpoins.js';
+import { Navigate } from 'react-router-dom';
 
 class AdmPage extends Component {
     constructor() {
         super();
 
         this.state = {
-            currentUser: null,
-            username: '',
+            currentUser: true,
             password: '',
             leads: [],
             dataInicio: '',
@@ -18,6 +18,10 @@ class AdmPage extends Component {
 
     componentDidMount() {
         this.getLeads();
+    }
+
+    componentWillUnmount() {
+        localStorage.setItem("jwtToken", null);
     }
 
     signOut = () => {
@@ -64,7 +68,10 @@ class AdmPage extends Component {
     render() {
         return (
             <div>
-                <div>Seja bem-vindo, {this.state.username}!</div>
+                {!this.state.currentUser ? (
+                    <Navigate to="/" />
+                ) : (<div><div>Seja bem-vindo!</div></div>)}
+
                 <input type="button" onClick={this.signOut} value="Log out" />
                 <input type="button" onClick={this.getLeads} value="Busca leads" />
                 <input type="button" onClick={this.getExcel} value="Exportar" />

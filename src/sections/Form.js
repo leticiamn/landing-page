@@ -98,13 +98,13 @@ const Form = () => {
                         </label>
                         <div>{terms.error && <p>{terms.error}</p>}</div>
 
-                        <button button type="submit" >ENTRE EM CONTATO</button>
+                        <button type="submit" >ENTRE EM CONTATO</button>
                     </form>
                 </div>
             )
             }
 
-        </div >
+        </div>
     );
 
 }

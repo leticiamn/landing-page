@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-  baseURL: "https://projetocamilla.herokuapp.com/",
+  baseURL: "http://localhost:8080/",
   headers: {
     "Content-type": "application/json",
   },
@@ -16,10 +16,6 @@ export const exportExcel = () => {
     responseType: "blob",
     headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") },
   });
-};
-
-export const create = (data) => {
-  return httpClient.post("/admin", data);
 };
 
 export const buscaPeriodo = (data) => {

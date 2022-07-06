@@ -14,11 +14,7 @@ class Login extends Component {
     }
 
     componentDidMount() {
-        if (localStorage.getItem("jwtToken")) this.setState({ currentUser: true });
-    }
-
-    componentWillUnmount() {
-        localStorage.setItem("jwtToken", null);
+        if (localStorage.getItem("jwtToken") == null) this.setState({ currentUser: true });
     }
 
     getUser = (event) => {
@@ -42,7 +38,7 @@ class Login extends Component {
             <div>
                 {this.state.currentUser ?
                     (
-                        <AdmPage />
+                        <AdmPage user={this.state.username} />
 
                     ) : (
                         <div className="form login-form">
